@@ -1,0 +1,25 @@
+{
+   int l = 0;
+   int r = 0;
+   input(l);
+   input(r);
+   int i = l;
+   int ans = 0;
+   int divisor = 1;
+   int divs = 0;
+   while (i - 1 < r) {
+      divisor = 1;
+      divs = 0;
+      while (divisor - 1 < i) {
+         if (i % divisor ~ 0) {
+            divs = divs + 1;
+         };
+         divisor = divisor + 1;
+      };
+      if (divs ~ 2) {
+         ans = ans + 1;
+      };
+      i = i + 1;
+   };
+   print(ans);
+}
